@@ -1,11 +1,36 @@
 # drf_blog  
 a Django REST framework blog  
-# `env\`
+
+## `env\`
 python 3.6  
 django 3.1.2  
 djangorestframework 3.11.2
-# `source\`
-blog source codes and website setting
-## blog_Modles
 
-## blog_Views
+## `source\`
+blog source codes and website setting
+
+### Modles
+database table 'category' design: 
+| fileds | types |
+| :---: | :---: |
+| name | CharField|
+
+database table 'tags' design: 
+| fileds | types |
+| :---: | :---: |
+| name | CharField|
+
+database table 'blog' design:  
+| fileds | types |
+| :---: | :---: |
+| title | CharField |
+| author | ForeignKey |
+| create_time | DateTimeField |
+| modify_time | DateTimeField |
+| abstract | TextField |
+| category |  ManyToManyField |
+| tags | ManyToManyField |
+| pagevisits | PositiveIntegerField |
+| body | TextField |
+### Views and Urls
+### Pages
