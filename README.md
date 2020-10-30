@@ -20,7 +20,7 @@ database table 'tags' design:
 | :---: | :---: |
 | name | CharField|
 
-database table 'blog' design:  
+database table 'blog' design:
 | fileds | types |
 | :---: | :---: |
 | title | CharField |
