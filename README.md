@@ -25,8 +25,8 @@ database table 'blog' design:
 | :---: | :---: |
 | title | CharField |
 | author | ForeignKey |
-| create_time | DateTimeField |
-| modify_time | DateTimeField |
+| created_time | DateTimeField |
+| modifyed_time | DateTimeField |
 | excerpt | TextField |
 | category |  ManyToManyField |
 | tags | ManyToManyField |
