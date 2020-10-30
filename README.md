@@ -27,7 +27,7 @@ database table 'blog' design:
 | author | ForeignKey |
 | create_time | DateTimeField |
 | modify_time | DateTimeField |
-| abstract | TextField |
+| excerpt | TextField |
 | category |  ManyToManyField |
 | tags | ManyToManyField |
 | views | PositiveIntegerField |
