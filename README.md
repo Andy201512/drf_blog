@@ -30,7 +30,7 @@ database table 'blog' design:
 | abstract | TextField |
 | category |  ManyToManyField |
 | tags | ManyToManyField |
-| pagevisits | PositiveIntegerField |
+| views | PositiveIntegerField |
 | body | TextField |
 ### Views and Urls
 ### Pages
