@@ -1,12 +1,12 @@
 # drf_blog  
 a Django REST framework blog  
 
-## `env\`
+## env
 python 3.6  
 django 3.1.2  
 djangorestframework 3.11.2
 
-## `source\`
+## source code
 blog source codes and website setting
 
 ### Modles
