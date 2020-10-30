@@ -1,9 +1,9 @@
 # drf_blog  
-a Django REST framework blog  
+a Django REST framework blog
 
 ## env
-python 3.6  
-django 3.1.2  
+python 3.6
+django 3.1.2
 djangorestframework 3.11.2
 
 ## source code
@@ -15,7 +15,7 @@ database table 'category' design:
 | :---: | :---: |
 | name | CharField|
 
-database table 'tags' design: 
+database table 'tags' design:
 | fileds | types |
 | :---: | :---: |
 | name | CharField|
