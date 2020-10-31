@@ -31,6 +31,7 @@ database table 'blog' design:
 | category |  ForeignKey |
 | tags | ManyToManyField |
 | views | PositiveIntegerField |
+| img | ImageField |
 | body | TextField |
 ### Views and Urls
 ### Pages
