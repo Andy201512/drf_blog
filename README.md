@@ -15,7 +15,7 @@ database table 'category' design:
 | :---: | :---: |
 | name | CharField|
 
-database table 'tags' design:
+database table 'tag' design:
 | fileds | types |
 | :---: | :---: |
 | name | CharField|
