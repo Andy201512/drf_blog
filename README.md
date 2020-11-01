@@ -5,6 +5,9 @@ a Django REST framework blog
 python 3.6  
 django 3.1.2  
 djangorestframework 3.11.2
+### warnning
+before using this blog in production environmentt, remember to change the website SECRET_KEY in `drf_blog/website/website/
+/setting.py`
 
 ## source code
 blog source codes and website setting
