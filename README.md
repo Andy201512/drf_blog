@@ -33,5 +33,5 @@ database table 'blog' design:
 | views | PositiveIntegerField |
 | img | ImageField |
 | body | TextField |
-### Views and Urls
+### Views
 ### Pages
