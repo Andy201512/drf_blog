@@ -4,7 +4,7 @@ a Django REST framework blog
 ## env
 python 3.6  
 django 3.1.2  
-djangorestframework 3.11.2
+djangorestframework 3.11.2  
 ### warnning
 before using this blog in production environmentt, remember to change the website SECRET_KEY in `drf_blog/website/website/setting.py`
 
@@ -35,5 +35,8 @@ database table 'blog' design:
 | views | PositiveIntegerField |
 | img | ImageField |
 | body | TextField |
-### Views
+###  drf viewsets 
+serializer: default  
+pagenation: page_size = 5  
+permission: IsAuthenticateOrReadOnly, IsAuthorOrReadOnly  
 ### Pages
