@@ -20,6 +20,6 @@ class ArticleSerializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.name')
 
     class Mate:
-    model = Article
-    fields = ['id', ' author', 'created_time', 'modifyed_time', 'excerpt', 'category', 'tags',
+        model = Article
+        fields = ['id', ' author', 'created_time', 'modifyed_time', 'excerpt', 'category', 'tags',
               'views', 'img', 'body']
