@@ -8,4 +8,4 @@ class CategoryTestCase(TestCase):
 
     def test_Category_name(self):
         category1 = Category.objects.get(id=1)
-        self.assertIs(category1.name(), 'test1)
+        self.assertEqual(category1.name, 'test1')
