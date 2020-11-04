@@ -9,17 +9,17 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class TagSerializer(serializers.ModelSerializer):
-    class Mate:
+    class Meta:
         model = Tag
         fields = ['id', 'name']
 
 
 class ArticleSerializer(serializers.ModelSerializer):
     category = serializers.ReadOnlyField(source='category.name')
-    tag = serializers.ReadOnlyField(source='tag.name')
+    tags = serializers.ReadOnlyField(source='tag.name')
     author = serializers.ReadOnlyField(source='author.name')
 
-    class Mate:
+    class Meta:
         model = Article
-        fields = ['id', ' author', 'created_time', 'modifyed_time', 'excerpt', 'category', 'tags',
+        fields = ['id', 'author', 'created_time', 'modifyed_time', 'excerpt', 'category', 'tags',
               'views', 'img', 'body']
