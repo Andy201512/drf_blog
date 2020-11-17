@@ -15,8 +15,8 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class ArticleSerializer(serializers.ModelSerializer):
-    category = serializers.ReadOnlyField(source='category.name')
-    tags = serializers.ReadOnlyField(source='tag.name')
+    category = CategorySerializer()
+    tags = TagSerializer(many=True)
     author = serializers.ReadOnlyField(source='author.name')
 
     class Meta:
