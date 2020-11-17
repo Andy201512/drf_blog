@@ -38,6 +38,10 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
 
     class Mate:
         verbose_name = '文章'

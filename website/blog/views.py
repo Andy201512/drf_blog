@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import permissions
+from rest_framework.decorators import action
+from rest_framework.response import Response
 from .models import Category, Tag, Article
 from .serializers import CategorySerializer, TagSerializer, ArticleSerializer
 from .paginations import CategoryPagination, TagPagination, ArticlePagination
@@ -26,6 +28,11 @@ class ArticleViewSet(viewsets.ModelViewSet):
     pagination_class = ArticlePagination
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly]
     queryset = Article.objects.all().order_by('-id')
-
+    
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        instance.increase_views()
+        return Response(serializer.data)
 
 
