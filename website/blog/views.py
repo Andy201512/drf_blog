@@ -8,6 +8,8 @@ from .serializers import CategorySerializer, TagSerializer, ArticleSerializer
 from .paginations import CategoryPagination, TagPagination, ArticlePagination
 from .permissions import IsAuthorOrReadOnly
 
+import markdown
+
 
 class CategoryViewSet(viewsets.ModelViewSet):
     serializer_class = CategorySerializer
@@ -33,6 +35,12 @@ class ArticleViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
         instance.increase_views()
+        instance.body = markdown.markdown(instance.body,
+                         extensions=[
+                             'markdown.extensions.extra',
+                             'markdown.extensions.codehilite',
+                             'markdown.extensions.toc'
+                         ])
         return Response(serializer.data)
 
 
