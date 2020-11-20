@@ -18,6 +18,8 @@ class ArticleSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
     tags = TagSerializer(many=True)
     author = serializers.ReadOnlyField(source='author.name')
+    created_time = serializers.DateTimeField(format='%Y-%m-%d %a %H:%M:%S', read_only=True)
+    modifyed_time = serializers.DateTimeField(format='%Y-%m-%d %a %H:%M:%S', read_only=True)
 
     class Meta:
         model = Article
